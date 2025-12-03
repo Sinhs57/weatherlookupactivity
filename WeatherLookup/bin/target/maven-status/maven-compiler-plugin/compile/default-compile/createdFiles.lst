@@ -1,0 +1,6 @@
+comexampleproject\WeatherLookupApplication.class
+comexampleproject\service\WeatherService.class
+comexampleproject\controller\WeatherController.class
+comexampleproject\model\Forecast$ForecastPeriod.class
+comexampleproject\config\AppConfig.class
+comexampleproject\model\Forecast.class

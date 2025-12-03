@@ -1,0 +1,47 @@
+<!--
+  Author: Shakib Sinha
+  Date: April 30th, 2025
+  Subject: IT-634-10524-M01 Distributed App Development 2025
+  Instructor: Professor Ace Gayhart
+  Assignment: 6-1 Activity: Write a Client Program to Check the Weather
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View the latest weather forecast results.">
+    <title>Forecast Results</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Lookup Application</h1>
+    </header>
+
+    <main class="container">
+        <h2>Forecast (Last Updated: <span th:text="${forecast.title}">N/A</span>)</h2>
+
+        <ul th:if="${forecast != null and forecast.periods != null and #lists.isNotEmpty(forecast.periods)}" class="forecast-list">
+            <li th:each="p : ${forecast.periods}">
+                <strong th:text="${p.name}">Period</strong>: <span th:text="${p.details}">Details</span>
+            </li>
+        </ul>
+
+        <p th:if="${forecast == null or forecast.periods == null or #lists.isEmpty(forecast.periods)}" class="error" aria-live="polite">
+            No forecast data available.
+        </p>
+
+        <div style="margin-top: 2rem;">
+            <a href="/" class="back-button">Search Again</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Weather Lookup Application. All rights reserved.</p>
+    </footer>
+</body>
+</html>

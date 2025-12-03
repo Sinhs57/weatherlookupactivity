@@ -1,0 +1,47 @@
+<!--
+  Author: Shakib Sinha
+  Date: April 30th, 2025
+  Subject: IT-634-10524-M01 Distributed App Development 2025
+  Instructor: Professor Ace Gayhart
+  Assignment: 6-1 Activity: Write a Client Program to Check the Weather
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check the latest weather forecast by entering latitude and longitude.">
+    <title>Weather Lookup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Weather Lookup Application</h1>
+</header>
+
+<div class="container">
+    <h2>Check Weather Forecast</h2>
+    <p>Enter the latitude and longitude of a U.S. city to view its current forecast.</p>
+
+    <form th:action="@{/getForecast}" method="post">
+        <label for="latitude">Latitude:</label>
+        <input type="number" id="latitude" name="latitude" step="any" placeholder="e.g., 40.7128 (NYC)" value="40.7128" required min="-90" max="90">
+
+        <label for="longitude">Longitude:</label>
+        <input type="number" id="longitude" name="longitude" step="any" placeholder="e.g., -74.0060 (NYC)" value="-74.0060" required min="-180" max="180">
+
+        <button type="submit">Get Forecast</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    <!-- Error message display -->
+    <p th:if="${error != null and !#strings.isEmpty(error)}" th:text="${error}" class="error" aria-live="polite"></p>
+</div>
+
+<footer>
+    <p>&copy; 2025 Weather Lookup Application. All rights reserved.</p>
+</footer>
+</body>
+</html>

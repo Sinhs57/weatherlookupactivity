@@ -1,0 +1,52 @@
+############################
+# Maven / Java Build Files
+############################
+target/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+
+############################
+# Logs
+############################
+logs/
+*.log
+*.gz
+
+############################
+# Eclipse / STS
+############################
+.classpath
+.project
+.settings/
+.metadata/
+
+############################
+# VS Code
+############################
+.vscode/
+
+############################
+# OS Files
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# Maven backup files
+############################
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+############################
+# Misc
+############################
+*.zip
+*.tar
+*.tar.gz
+*.orig

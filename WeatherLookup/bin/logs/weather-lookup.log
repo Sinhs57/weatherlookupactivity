@@ -1,0 +1,726 @@
+2025-04-30T22:43:02.104-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 19044 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T22:43:02.107-04:00 DEBUG 19044 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T22:43:02.109-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T22:43:02.215-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T22:43:02.216-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T22:43:04.054-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T22:43:04.066-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T22:43:04.066-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T22:43:04.121-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T22:43:04.122-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1906 ms
+2025-04-30T22:43:04.321-04:00  WARN 19044 --- [WeatherLookupApplication] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-04-30T22:43:04.327-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-30T22:43:04.381-04:00  INFO 19044 --- [WeatherLookupApplication] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-30T22:43:04.408-04:00 ERROR 19044 --- [WeatherLookupApplication] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in comexampleproject.service.WeatherService required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2025-04-30T22:43:04.410-04:00 ERROR 19044 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application failed to start due to an error: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:772) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:752) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:769) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1878) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1404) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 36 common frames omitted
+
+2025-04-30T22:43:04.428-04:00 ERROR 19044 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application failed to start due to an error: null
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+
+2025-04-30T22:49:26.228-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 4828 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T22:49:26.228-04:00 DEBUG 4828 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T22:49:26.231-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T22:49:26.290-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T22:49:26.290-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T22:49:28.110-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T22:49:28.122-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T22:49:28.122-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T22:49:28.176-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T22:49:28.178-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1887 ms
+2025-04-30T22:49:28.368-04:00  WARN 4828 --- [WeatherLookupApplication] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-04-30T22:49:28.370-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-30T22:49:28.397-04:00  INFO 4828 --- [WeatherLookupApplication] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-30T22:49:28.423-04:00 ERROR 4828 --- [WeatherLookupApplication] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in comexampleproject.service.WeatherService required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2025-04-30T22:49:28.423-04:00 ERROR 4828 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application failed to start due to an error: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:772) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:752) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:769) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1878) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1404) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 36 common frames omitted
+
+2025-04-30T22:49:28.427-04:00 ERROR 4828 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application failed to start due to an error: null
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+
+2025-04-30T22:51:45.582-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 9192 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T22:51:45.583-04:00 DEBUG 9192 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T22:51:45.584-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T22:51:45.652-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T22:51:45.652-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T22:51:47.517-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T22:51:47.531-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T22:51:47.532-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T22:51:47.584-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T22:51:47.586-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1934 ms
+2025-04-30T22:51:47.776-04:00  WARN 9192 --- [WeatherLookupApplication] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-04-30T22:51:47.778-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-30T22:51:47.803-04:00  INFO 9192 --- [WeatherLookupApplication] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-30T22:51:47.833-04:00 ERROR 9192 --- [WeatherLookupApplication] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in comexampleproject.service.WeatherService required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2025-04-30T22:51:47.836-04:00 ERROR 9192 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application failed to start due to an error: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:772) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:752) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherService' defined in file [C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes\comexampleproject\service\WeatherService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:769) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1878) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1404) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 36 common frames omitted
+
+2025-04-30T22:51:47.854-04:00 ERROR 9192 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application failed to start due to an error: null
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+
+2025-04-30T22:56:04.917-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 5304 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T22:56:04.917-04:00 DEBUG 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T22:56:04.919-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T22:56:04.983-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T22:56:04.984-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T22:56:06.730-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T22:56:06.740-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T22:56:06.741-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T22:56:06.791-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T22:56:06.792-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1808 ms
+2025-04-30T22:56:07.175-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-04-30T22:56:07.559-04:00  WARN 5304 --- [WeatherLookupApplication] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 884304af-83a3-4bed-9f64-ff512623f6d9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-30T22:56:07.829-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-04-30T22:56:07.863-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f74f880, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@455904a, org.springframework.security.web.context.SecurityContextHolderFilter@1c8a715f, org.springframework.security.web.header.HeaderWriterFilter@1c7c8eb3, org.springframework.web.filter.CorsFilter@713c671b, org.springframework.security.web.csrf.CsrfFilter@4a8bb315, org.springframework.security.web.authentication.logout.LogoutFilter@9918a2b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@507182, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4e40f4be, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@17a6036e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@68726509, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9f8de7c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42949c24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f4e49e2, org.springframework.security.web.access.ExceptionTranslationFilter@73cdc6e8, org.springframework.security.web.access.intercept.AuthorizationFilter@4ecdeaa2]
+2025-04-30T22:56:07.946-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-30T22:56:08.025-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-04-30T22:56:08.046-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.709 seconds (process running for 4.172)
+2025-04-30T22:56:08.172-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-04-30T22:56:08.173-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Active profiles: 
+2025-04-30T22:56:08.177-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-04-30T22:56:08.178-04:00  INFO 5304 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-04-30T22:56:08.180-04:00 ERROR 5304 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application failed to start due to an error: null
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+
+2025-04-30T22:57:00.969-04:00  INFO 5304 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-30T22:57:00.985-04:00  INFO 5304 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-30T22:57:00.986-04:00  INFO 5304 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-30T22:57:01.103-04:00  WARN 5304 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-04-30T22:59:39.200-04:00  INFO 9836 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 9836 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T22:59:39.201-04:00 DEBUG 9836 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T22:59:39.202-04:00  INFO 9836 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T22:59:39.288-04:00  INFO 9836 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T22:59:39.289-04:00  INFO 9836 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T23:01:28.112-04:00  INFO 16168 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 16168 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:01:28.113-04:00 DEBUG 16168 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:01:28.115-04:00  INFO 16168 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:01:28.176-04:00  INFO 16168 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T23:01:28.176-04:00  INFO 16168 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T23:02:53.985-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 15380 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:02:53.987-04:00 DEBUG 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:02:53.987-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:02:54.047-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T23:02:54.047-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T23:02:55.614-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T23:02:55.624-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T23:02:55.624-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T23:02:55.666-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T23:02:55.666-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1617 ms
+2025-04-30T23:02:55.975-04:00  WARN 15380 --- [WeatherLookupApplication] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9b608b2a-c687-4e3a-9401-4653850b700c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-30T23:02:56.107-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-04-30T23:02:56.297-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-04-30T23:02:56.313-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@359c721, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7741d410, org.springframework.security.web.context.SecurityContextHolderFilter@3751d25, org.springframework.security.web.header.HeaderWriterFilter@9e3676, org.springframework.web.filter.CorsFilter@5c1a906a, org.springframework.security.web.authentication.logout.LogoutFilter@3cea1d8b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1283bcfb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5eea5bc1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7fd3ae6d, org.springframework.security.web.access.ExceptionTranslationFilter@7227c6f8, org.springframework.security.web.access.intercept.AuthorizationFilter@5a55c735]
+2025-04-30T23:02:56.719-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-30T23:02:56.791-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-04-30T23:02:56.810-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.283 seconds (process running for 3.712)
+2025-04-30T23:02:56.911-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-04-30T23:02:56.911-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Active profiles: 
+2025-04-30T23:02:56.913-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-04-30T23:02:56.913-04:00  INFO 15380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-04-30T23:02:56.915-04:00 ERROR 15380 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application failed to start due to an error: null
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+
+2025-04-30T23:05:57.836-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 16980 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:05:57.837-04:00 DEBUG 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:05:57.839-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:05:57.934-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T23:05:57.934-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T23:05:59.543-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T23:05:59.553-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T23:05:59.554-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T23:05:59.593-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T23:05:59.593-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1658 ms
+2025-04-30T23:05:59.930-04:00  WARN 16980 --- [WeatherLookupApplication] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: de739901-b51e-4345-8eb6-2f5c172def1f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-30T23:06:00.032-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-04-30T23:06:00.207-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-04-30T23:06:00.223-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64ed7074, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b05a6f, org.springframework.security.web.context.SecurityContextHolderFilter@596b61fd, org.springframework.security.web.header.HeaderWriterFilter@68933153, org.springframework.web.filter.CorsFilter@50d872, org.springframework.security.web.authentication.logout.LogoutFilter@57610973, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7565eec5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@689cdcd0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e9c986, org.springframework.security.web.access.ExceptionTranslationFilter@73fd9524, org.springframework.security.web.access.intercept.AuthorizationFilter@7c93451b]
+2025-04-30T23:06:00.634-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-30T23:06:00.709-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-04-30T23:06:00.728-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.366 seconds (process running for 3.806)
+2025-04-30T23:06:00.837-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-04-30T23:06:00.838-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Active profiles: 
+2025-04-30T23:06:00.840-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-04-30T23:06:00.841-04:00  INFO 16980 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-04-30T23:06:00.843-04:00 ERROR 16980 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application failed to start due to an error: null
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+
+2025-04-30T23:10:51.511-04:00  INFO 16340 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 16340 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:10:51.513-04:00 DEBUG 16340 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:10:51.514-04:00  INFO 16340 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:10:51.577-04:00  INFO 16340 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T23:10:51.577-04:00  INFO 16340 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T23:13:23.828-04:00  INFO 16784 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 16784 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:13:23.830-04:00 DEBUG 16784 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:13:23.830-04:00  INFO 16784 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:13:23.887-04:00  INFO 16784 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-30T23:13:23.887-04:00  INFO 16784 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T23:14:54.213-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 380 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:14:54.215-04:00 DEBUG 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:14:54.215-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:14:54.270-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-30T23:14:55.889-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T23:14:55.903-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T23:14:55.905-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T23:14:55.962-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T23:14:55.964-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1693 ms
+2025-04-30T23:14:56.265-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-04-30T23:14:56.670-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-30T23:14:56.686-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-04-30T23:14:56.863-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-04-30T23:14:56.890-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.135 seconds (process running for 3.561)
+2025-04-30T23:14:57.012-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-04-30T23:14:57.013-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Active profiles: 
+2025-04-30T23:14:57.017-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-04-30T23:14:57.018-04:00  INFO 380 --- [WeatherLookupApplication] [restartedMain] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-04-30T23:14:57.022-04:00 ERROR 380 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application failed to start due to an error: null
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.2.0.jar:3.2.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at comexampleproject.WeatherLookupApplication.main(WeatherLookupApplication.java:35) ~[classes/:na]
+
+2025-04-30T23:18:16.868-04:00  INFO 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 620 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:18:16.868-04:00 DEBUG 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:18:16.873-04:00  INFO 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:18:18.397-04:00  INFO 620 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T23:18:18.416-04:00  INFO 620 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T23:18:18.417-04:00  INFO 620 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T23:18:18.485-04:00  INFO 620 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T23:18:18.487-04:00  INFO 620 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1554 ms
+2025-04-30T23:18:18.832-04:00  INFO 620 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-04-30T23:18:19.212-04:00  INFO 620 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-04-30T23:18:19.383-04:00  INFO 620 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-04-30T23:18:19.406-04:00  INFO 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.05 seconds (process running for 3.426)
+2025-04-30T23:18:19.526-04:00  INFO 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-04-30T23:18:19.526-04:00  INFO 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-04-30T23:18:19.530-04:00  INFO 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-04-30T23:18:19.530-04:00  INFO 620 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-04-30T23:18:49.888-04:00  INFO 620 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-30T23:18:49.893-04:00  INFO 620 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-30T23:18:49.901-04:00  INFO 620 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-04-30T23:18:50.032-04:00  INFO 620 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-04-30T23:19:19.328-04:00  INFO 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : Received request to fetch forecast for lat=37.7749, lon=-122.4194
+2025-04-30T23:19:19.333-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/37.7749,-122.4194
+2025-04-30T23:19:19.628-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/37.7749,-122.4194
+2025-04-30T23:19:19.639-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-04-30T23:19:20.194-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Response 200 OK
+2025-04-30T23:19:20.201-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-04-30T23:19:20.231-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.service.WeatherService                 : Using forecast URL: https://api.weather.gov/gridpoints/MTR/85,105/forecast
+2025-04-30T23:19:20.237-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/MTR/85,105/forecast
+2025-04-30T23:19:20.240-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-04-30T23:19:20.276-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Response 200 OK
+2025-04-30T23:19:20.279-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-04-30T23:19:20.295-04:00 ERROR 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.service.WeatherService                 : Unexpected error while retrieving forecast: Title cannot be null or empty.
+
+java.lang.IllegalArgumentException: Title cannot be null or empty.
+	at comexampleproject.model.Forecast.setTitle(Forecast.java:41) ~[classes/:na]
+	at comexampleproject.service.WeatherService.getForecast(WeatherService.java:69) ~[classes/:na]
+	at comexampleproject.controller.WeatherController.getForecast(WeatherController.java:77) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-04-30T23:19:20.306-04:00  WARN 620 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : No forecast returned for coordinates: lat=37.7749, lon=-122.4194
+2025-04-30T23:20:20.976-04:00  INFO 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.controller.WeatherController           : Received request to fetch forecast for lat=40.7128, lon=-74.0060
+2025-04-30T23:20:20.979-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/40.7128,-74.0060
+2025-04-30T23:20:20.987-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/40.7128,-74.0060
+2025-04-30T23:20:20.991-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-04-30T23:20:21.516-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Response 200 OK
+2025-04-30T23:20:21.517-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-04-30T23:20:21.521-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.service.WeatherService                 : Using forecast URL: https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-04-30T23:20:21.531-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-04-30T23:20:21.535-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-04-30T23:20:21.798-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Response 200 OK
+2025-04-30T23:20:21.800-04:00 DEBUG 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-04-30T23:20:21.814-04:00 ERROR 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.service.WeatherService                 : Unexpected error while retrieving forecast: Title cannot be null or empty.
+
+java.lang.IllegalArgumentException: Title cannot be null or empty.
+	at comexampleproject.model.Forecast.setTitle(Forecast.java:41) ~[classes/:na]
+	at comexampleproject.service.WeatherService.getForecast(WeatherService.java:69) ~[classes/:na]
+	at comexampleproject.controller.WeatherController.getForecast(WeatherController.java:77) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-04-30T23:20:21.821-04:00  WARN 620 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.controller.WeatherController           : No forecast returned for coordinates: lat=40.7128, lon=-74.0060
+2025-04-30T23:31:52.969-04:00  INFO 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 21744 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:31:52.971-04:00 DEBUG 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:31:52.974-04:00  INFO 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T23:31:54.498-04:00  INFO 21744 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-30T23:31:54.510-04:00  INFO 21744 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T23:31:54.511-04:00  INFO 21744 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-30T23:31:54.583-04:00  INFO 21744 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T23:31:54.583-04:00  INFO 21744 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1548 ms
+2025-04-30T23:31:54.875-04:00  INFO 21744 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-04-30T23:31:55.283-04:00  INFO 21744 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-04-30T23:31:55.459-04:00  INFO 21744 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-04-30T23:31:55.483-04:00  INFO 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.028 seconds (process running for 3.394)
+2025-04-30T23:31:55.599-04:00  INFO 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-04-30T23:31:55.600-04:00  INFO 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-04-30T23:31:55.603-04:00  INFO 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-04-30T23:31:55.604-04:00  INFO 21744 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-04-30T23:32:14.316-04:00  INFO 21744 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-30T23:32:14.322-04:00  INFO 21744 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-30T23:32:14.331-04:00  INFO 21744 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-04-30T23:32:14.445-04:00  INFO 21744 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-04-30T23:32:53.080-04:00  INFO 21744 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-04-30T23:36:17.711-04:00  INFO 15128 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 15128 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-04-30T23:36:17.721-04:00 DEBUG 15128 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-04-30T23:36:17.722-04:00  INFO 15128 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"

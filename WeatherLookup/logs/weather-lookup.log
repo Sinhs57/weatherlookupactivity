@@ -1,0 +1,316 @@
+2025-05-01T00:00:40.160-04:00  INFO 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Received request to fetch forecast for lat=0, lon=0
+2025-05-01T00:00:40.187-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/0,0
+2025-05-01T00:00:40.216-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/0,0
+2025-05-01T00:00:40.218-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T00:00:47.617-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-01T00:00:47.640-04:00 ERROR 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.service.WeatherService                 : HTTP error while fetching forecast: 404 Not Found: "{<EOL>    "correlationId": "2e2ac5d",<EOL>    "title": "Data Unavailable For Requested Point",<EOL>    "type": "https://api.weather.gov/problems/InvalidPoint",<EOL>    "status": 404,<EOL>    "detail": "Unable to provide data for requested point 0,0",<EOL>    "instance": "https://api.weather.gov/requests/2e2ac5d"<EOL>}"
+2025-05-01T00:00:47.641-04:00  WARN 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : No forecast returned for coordinates: lat=0, lon=0
+2025-05-01T00:01:50.204-04:00  INFO 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] c.controller.WeatherController           : Received request to fetch forecast for lat=38.8977, lon=-77.0365
+2025-05-01T00:01:50.206-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/38.8977,-77.0365
+2025-05-01T00:01:50.207-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/38.8977,-77.0365
+2025-05-01T00:01:50.208-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T00:01:50.326-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T00:01:50.326-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T00:01:50.328-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/LWX/97,71/forecast
+2025-05-01T00:01:50.328-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/LWX/97,71/forecast
+2025-05-01T00:01:50.330-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T00:01:50.356-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T00:01:50.356-04:00 DEBUG 3540 --- [WeatherLookupApplication] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T13:16:18.549-04:00  INFO 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 13512 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T13:16:18.549-04:00 DEBUG 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T13:16:18.553-04:00  INFO 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T13:16:20.764-04:00  INFO 13512 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T13:16:20.816-04:00  INFO 13512 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T13:16:20.817-04:00  INFO 13512 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T13:16:20.904-04:00  INFO 13512 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T13:16:20.904-04:00  INFO 13512 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2283 ms
+2025-05-01T13:16:21.371-04:00  INFO 13512 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T13:16:22.014-04:00  INFO 13512 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T13:16:22.251-04:00  INFO 13512 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T13:16:22.283-04:00  INFO 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 4.467 seconds (process running for 4.972)
+2025-05-01T13:16:22.450-04:00  INFO 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T13:16:22.450-04:00  INFO 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T13:16:22.455-04:00  INFO 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T13:16:22.456-04:00  INFO 13512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T13:16:40.869-04:00  INFO 13512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T13:16:40.871-04:00  INFO 13512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T13:16:40.874-04:00  INFO 13512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-01T13:16:40.925-04:00  INFO 13512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:19:28.912-04:00  INFO 13512 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:19:30.620-04:00  INFO 13512 --- [WeatherLookupApplication] [http-nio-8080-exec-7] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:19:51.953-04:00  INFO 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 19876 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T13:19:51.955-04:00 DEBUG 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T13:19:51.956-04:00  INFO 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T13:19:53.736-04:00  INFO 19876 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T13:19:53.748-04:00  INFO 19876 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T13:19:53.750-04:00  INFO 19876 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T13:19:53.816-04:00  INFO 19876 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T13:19:53.817-04:00  INFO 19876 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1791 ms
+2025-05-01T13:19:54.169-04:00  INFO 19876 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T13:19:54.597-04:00  INFO 19876 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T13:19:54.690-04:00  INFO 19876 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T13:19:54.735-04:00  INFO 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.389 seconds (process running for 3.848)
+2025-05-01T13:19:54.848-04:00  INFO 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T13:19:54.852-04:00  INFO 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T13:19:54.854-04:00  INFO 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T13:19:54.854-04:00  INFO 19876 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T13:19:59.019-04:00  INFO 19876 --- [WeatherLookupApplication] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T13:19:59.019-04:00  INFO 19876 --- [WeatherLookupApplication] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T13:19:59.023-04:00  INFO 19876 --- [WeatherLookupApplication] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-01T13:19:59.176-04:00  INFO 19876 --- [WeatherLookupApplication] [http-nio-8080-exec-3] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:32:28.029-04:00  INFO 3220 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 3220 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T13:32:28.031-04:00 DEBUG 3220 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T13:32:28.032-04:00  INFO 3220 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T13:34:27.553-04:00  INFO 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 10512 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T13:34:27.554-04:00 DEBUG 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T13:34:27.555-04:00  INFO 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T13:34:29.090-04:00  INFO 10512 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T13:34:29.104-04:00  INFO 10512 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T13:34:29.105-04:00  INFO 10512 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T13:34:29.172-04:00  INFO 10512 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T13:34:29.172-04:00  INFO 10512 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1553 ms
+2025-05-01T13:34:29.511-04:00  INFO 10512 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T13:34:29.846-04:00  INFO 10512 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T13:34:30.051-04:00  INFO 10512 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T13:34:30.077-04:00  INFO 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.066 seconds (process running for 3.445)
+2025-05-01T13:34:30.198-04:00  INFO 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T13:34:30.199-04:00  INFO 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T13:34:30.201-04:00  INFO 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T13:34:30.202-04:00  INFO 10512 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T13:34:35.219-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T13:34:35.221-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T13:34:35.226-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-01T13:34:35.282-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:34:54.677-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.controller.WeatherController           : Received request to fetch forecast for lat=40.7128, lon=-74.0060
+2025-05-01T13:34:54.680-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T13:34:54.910-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T13:34:54.925-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T13:34:55.668-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T13:34:55.673-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T13:34:55.711-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T13:34:55.714-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T13:34:55.719-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T13:35:00.924-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T13:35:00.924-04:00 DEBUG 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T13:37:57.054-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:38:00.510-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-6] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:38:05.292-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-3] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:38:05.998-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-9] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:38:06.403-04:00  INFO 10512 --- [WeatherLookupApplication] [http-nio-8080-exec-10] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:39:01.218-04:00  INFO 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 11848 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T13:39:01.220-04:00 DEBUG 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T13:39:01.222-04:00  INFO 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T13:39:02.893-04:00  INFO 11848 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T13:39:02.902-04:00  INFO 11848 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T13:39:02.904-04:00  INFO 11848 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T13:39:02.976-04:00  INFO 11848 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T13:39:02.981-04:00  INFO 11848 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1697 ms
+2025-05-01T13:39:03.312-04:00  INFO 11848 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T13:39:03.707-04:00  INFO 11848 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T13:39:03.902-04:00  INFO 11848 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T13:39:03.927-04:00  INFO 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.228 seconds (process running for 3.606)
+2025-05-01T13:39:04.055-04:00  INFO 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T13:39:04.056-04:00  INFO 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T13:39:04.059-04:00  INFO 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T13:39:04.061-04:00  INFO 11848 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T13:39:07.621-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T13:39:07.622-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T13:39:07.625-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-01T13:39:07.692-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:40:37.471-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-3] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:40:37.801-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:40:37.943-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:40:38.128-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-10] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:40:38.278-04:00  INFO 11848 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:49:38.136-04:00  INFO 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 10740 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T13:49:38.138-04:00 DEBUG 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T13:49:38.140-04:00  INFO 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T13:49:39.712-04:00  INFO 10740 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T13:49:39.733-04:00  INFO 10740 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T13:49:39.734-04:00  INFO 10740 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T13:49:39.802-04:00  INFO 10740 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T13:49:39.802-04:00  INFO 10740 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1590 ms
+2025-05-01T13:49:40.092-04:00  INFO 10740 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T13:49:40.517-04:00  INFO 10740 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T13:49:40.737-04:00  INFO 10740 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T13:49:40.761-04:00  INFO 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.181 seconds (process running for 3.57)
+2025-05-01T13:49:40.904-04:00  INFO 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T13:49:40.905-04:00  INFO 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T13:49:40.908-04:00  INFO 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T13:49:40.909-04:00  INFO 10740 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T13:49:48.753-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T13:49:48.758-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T13:49:48.763-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-01T13:49:48.845-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:49:53.025-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Received request to fetch forecast for lat=40.7128, lon=-74.0060
+2025-05-01T13:49:53.027-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T13:49:53.264-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T13:49:53.279-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T13:49:53.879-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T13:49:53.885-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T13:49:53.919-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T13:49:53.923-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T13:49:53.925-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T13:49:53.956-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T13:49:53.959-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T13:49:59.046-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-6] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:49:59.849-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-9] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:50:00.529-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:50:01.068-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T13:51:22.536-04:00  INFO 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Received request to fetch forecast for lat=42.3188, lon=-71.0846
+2025-05-01T13:51:22.537-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/42.3188,-71.0846
+2025-05-01T13:51:22.537-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/42.3188,-71.0846
+2025-05-01T13:51:22.540-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T13:51:22.879-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T13:51:22.881-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T13:51:22.889-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/BOX/71,88/forecast
+2025-05-01T13:51:22.895-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/BOX/71,88/forecast
+2025-05-01T13:51:22.897-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T13:51:23.685-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T13:51:23.685-04:00 DEBUG 10740 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:04:45.888-04:00  INFO 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 11528 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T14:04:45.889-04:00 DEBUG 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T14:04:45.891-04:00  INFO 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T14:04:47.486-04:00  INFO 11528 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T14:04:47.509-04:00  INFO 11528 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T14:04:47.511-04:00  INFO 11528 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T14:04:47.561-04:00  INFO 11528 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T14:04:47.561-04:00  INFO 11528 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1598 ms
+2025-05-01T14:04:47.892-04:00  INFO 11528 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T14:04:48.343-04:00  INFO 11528 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T14:04:48.544-04:00  INFO 11528 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T14:04:48.571-04:00  INFO 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.227 seconds (process running for 3.629)
+2025-05-01T14:04:48.695-04:00  INFO 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T14:04:48.695-04:00  INFO 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T14:04:48.700-04:00  INFO 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T14:04:48.701-04:00  INFO 11528 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T14:04:52.993-04:00  INFO 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T14:04:52.993-04:00  INFO 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T14:04:52.997-04:00  INFO 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-01T14:04:53.051-04:00  INFO 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:04:59.546-04:00  INFO 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Received request to fetch forecast for lat=40.7128, lon=-74.0060
+2025-05-01T14:04:59.549-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T14:04:59.808-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T14:04:59.820-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:05:00.420-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:05:00.431-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:05:00.467-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T14:05:00.470-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T14:05:00.471-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:05:00.526-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:05:00.527-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-4] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:05:23.999-04:00  INFO 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : Received request to fetch forecast for lat=42.3188, lon=-71.0846
+2025-05-01T14:05:24.001-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/42.3188,-71.0846
+2025-05-01T14:05:24.005-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/42.3188,-71.0846
+2025-05-01T14:05:24.007-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:05:24.100-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:05:24.101-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:05:24.103-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/BOX/71,88/forecast
+2025-05-01T14:05:24.107-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/BOX/71,88/forecast
+2025-05-01T14:05:24.109-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:05:24.145-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:05:24.152-04:00 DEBUG 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-5] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:05:35.216-04:00  INFO 11528 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:10:51.473-04:00  INFO 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 2168 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T14:10:51.473-04:00 DEBUG 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T14:10:51.475-04:00  INFO 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T14:10:52.963-04:00  INFO 2168 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T14:10:52.981-04:00  INFO 2168 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T14:10:52.981-04:00  INFO 2168 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T14:10:53.051-04:00  INFO 2168 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T14:10:53.051-04:00  INFO 2168 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1516 ms
+2025-05-01T14:10:53.332-04:00  INFO 2168 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T14:10:53.688-04:00  INFO 2168 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T14:10:53.892-04:00  INFO 2168 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T14:10:53.914-04:00  INFO 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 2.943 seconds (process running for 3.319)
+2025-05-01T14:10:54.040-04:00  INFO 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T14:10:54.040-04:00  INFO 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T14:10:54.044-04:00  INFO 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T14:10:54.044-04:00  INFO 2168 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T14:10:57.266-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T14:10:57.266-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T14:10:57.270-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-01T14:10:57.311-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:02.908-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:06.049-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-6] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:06.294-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-7] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:06.406-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-9] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:06.775-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-10] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:06.906-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:07.538-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:07.787-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-3] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:07.851-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:09.291-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:11:09.517-04:00  INFO 2168 --- [WeatherLookupApplication] [http-nio-8080-exec-6] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:15:19.008-04:00  INFO 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 7376 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\Week 6\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T14:15:19.009-04:00 DEBUG 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T14:15:19.010-04:00  INFO 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T14:15:20.638-04:00  INFO 7376 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T14:15:20.649-04:00  INFO 7376 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T14:15:20.649-04:00  INFO 7376 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T14:15:20.711-04:00  INFO 7376 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T14:15:20.711-04:00  INFO 7376 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1632 ms
+2025-05-01T14:15:21.031-04:00  INFO 7376 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T14:15:21.385-04:00  INFO 7376 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T14:15:21.613-04:00  INFO 7376 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T14:15:21.633-04:00  INFO 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.159 seconds (process running for 3.551)
+2025-05-01T14:15:21.749-04:00  INFO 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T14:15:21.751-04:00  INFO 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T14:15:21.755-04:00  INFO 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T14:15:21.755-04:00  INFO 7376 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T14:15:25.538-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T14:15:25.538-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T14:15:25.541-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-01T14:15:25.589-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-3] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:15:31.893-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.controller.WeatherController           : Received request to fetch forecast for lat=40.7128, lon=-74.0060
+2025-05-01T14:15:31.897-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T14:15:32.185-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/40.7128,-74.0060
+2025-05-01T14:15:32.197-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:15:32.860-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:15:32.867-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:15:32.905-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T14:15:32.911-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/OKX/33,35/forecast
+2025-05-01T14:15:32.915-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:15:32.972-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:15:32.974-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-2] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:22:56.454-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.controller.WeatherController           : Received request to fetch forecast for lat=0, lon=0
+2025-05-01T14:22:56.459-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/0,0
+2025-05-01T14:22:56.463-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/0,0
+2025-05-01T14:22:56.466-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:22:58.604-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-8] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-01T14:22:58.623-04:00 ERROR 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.service.WeatherService                 : HTTP error while fetching forecast: 404 Not Found: "{<EOL>    "correlationId": "34a5592",<EOL>    "title": "Data Unavailable For Requested Point",<EOL>    "type": "https://api.weather.gov/problems/InvalidPoint",<EOL>    "status": 404,<EOL>    "detail": "Unable to provide data for requested point 0,0",<EOL>    "instance": "https://api.weather.gov/requests/34a5592"<EOL>}"
+2025-05-01T14:22:58.623-04:00  WARN 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-8] c.controller.WeatherController           : No forecast returned for coordinates: lat=0, lon=0
+2025-05-01T14:25:54.412-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.controller.WeatherController           : Received request to fetch forecast for lat=33.4484, lon=-112.0740
+2025-05-01T14:25:54.413-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.service.WeatherService                 : Calling Points API: https://api.weather.gov/points/33.4484,-112.0740
+2025-05-01T14:25:54.415-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/points/33.4484,-112.0740
+2025-05-01T14:25:54.416-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:25:55.875-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:25:55.880-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:25:55.885-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] c.service.WeatherService                 : Calling Forecast API: https://api.weather.gov/gridpoints/PSR/159,58/forecast
+2025-05-01T14:25:55.889-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : HTTP GET https://api.weather.gov/gridpoints/PSR/159,58/forecast
+2025-05-01T14:25:55.889-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-01T14:25:56.174-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-01T14:25:56.175-04:00 DEBUG 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/geo+json"
+2025-05-01T14:26:00.989-04:00  INFO 7376 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:47:27.912-04:00  INFO 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Starting WeatherLookupApplication using Java 21.0.4 with PID 4048 (C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\6-1 Activity Weather Application\WeatherLookup\target\classes started by shaki in C:\Users\shaki\OneDrive - SNHU\Desktop\SNHU Schoolwork\IT 634\6-1 Activity Weather Application\WeatherLookup)
+2025-05-01T14:47:27.925-04:00 DEBUG 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-01T14:47:27.929-04:00  INFO 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-01T14:47:29.935-04:00  INFO 4048 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-01T14:47:29.946-04:00  INFO 4048 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-01T14:47:29.948-04:00  INFO 4048 --- [WeatherLookupApplication] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-01T14:47:30.021-04:00  INFO 4048 --- [WeatherLookupApplication] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-01T14:47:30.025-04:00  INFO 4048 --- [WeatherLookupApplication] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2004 ms
+2025-05-01T14:47:30.395-04:00  INFO 4048 --- [WeatherLookupApplication] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-01T14:47:30.931-04:00  INFO 4048 --- [WeatherLookupApplication] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-01T14:47:31.110-04:00  INFO 4048 --- [WeatherLookupApplication] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-01T14:47:31.133-04:00  INFO 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Started WeatherLookupApplication in 3.907 seconds (process running for 4.455)
+2025-05-01T14:47:31.284-04:00  INFO 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : WeatherLookupApplication has started successfully.
+2025-05-01T14:47:31.285-04:00  INFO 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Active profiles: 
+2025-05-01T14:47:31.287-04:00  INFO 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Name: WeatherLookupApplication
+2025-05-01T14:47:31.288-04:00  INFO 4048 --- [WeatherLookupApplication] [main] c.WeatherLookupApplication               : Application Version: 1.0.0
+2025-05-01T14:47:34.601-04:00  INFO 4048 --- [WeatherLookupApplication] [http-nio-8080-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01T14:47:34.605-04:00  INFO 4048 --- [WeatherLookupApplication] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-01T14:47:34.609-04:00  INFO 4048 --- [WeatherLookupApplication] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-01T14:47:34.677-04:00  INFO 4048 --- [WeatherLookupApplication] [http-nio-8080-exec-7] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:47:48.348-04:00  INFO 4048 --- [WeatherLookupApplication] [http-nio-8080-exec-4] c.controller.WeatherController           : Accessed the root URL to display the form.
+2025-05-01T14:48:19.878-04:00  INFO 4048 --- [WeatherLookupApplication] [http-nio-8080-exec-5] c.controller.WeatherController           : Accessed the root URL to display the form.
